@@ -1,0 +1,79 @@
+
+body{
+    background-color: #191919;
+    box-sizing: border-box;
+}
+
+#calculator_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    margin: 5vw 37.5vw;
+    width: 25vw;
+    height: 65vh;
+    gap: .5vw;
+    font-size: 2rem;
+    border: .125vw solid lightgray;
+    padding: 2vw;
+    border-radius: .5vw;
+}
+
+    #equation_container{
+        font-size: 3rem;
+        grid-column: 1 / 5;
+        height: 10vh;
+        border: .125vw solid lightgray;
+        background-color: #222222;
+        border-radius: .5vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+        #equation{
+            font-size: inherit;
+            color: lightgray;
+            margin-right: 1vw;
+        }
+
+    button,
+    .button{
+        height: 100%;
+        width: 100%;
+    }
+
+    button{
+        font-size: inherit;
+        height: 7vh;
+        color: lightgray;
+        background-color: #191919;
+        border: .125vw solid lightgray;
+        border-radius: 1vw;
+    }
+
+        button:hover {
+            border: .125vw solid white;
+            background-color: #222222;
+            cursor: pointer;
+        }
+
+
+        
+@media (max-width: 1200px) or (max-height: 600px){
+    #calculator_container{
+        margin: 5vw 35vw;
+        width: 30vw;
+        height: 60vh;
+        gap: .5vw;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 900px){
+    #calculator_container{
+        margin: 5vw 20vw;
+        width: 60vw;
+        height: 75vh;
+        gap: .5vw;
+        font-size: 1rem;
+    }
+}
+        

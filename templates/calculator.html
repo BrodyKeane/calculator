@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="calculator_container">
+        <div id="equation_container">
+            <div id="undo"></div>
+            <div id="equation">{{ equation }}</div>
+        </div>
+    
+        {% for symbol in symbols %}
+        <form class="button" action="{{ url_for('append_symbol') }}" method="POST">
+            <input type="hidden" name="equation" value="{{ equation }}">
+            <input type="hidden" name="symbol" value="{{ symbol }}">
+            <button type="submit">{{ symbol }}</button>
+        </form> 
+        {% endfor %}
+    </div>
+</body>
+</html>
